@@ -34,7 +34,7 @@ $('#share').addEventListener('click',async()=>{if(location.protocol==='file:'){t
 const canvas=$('#universe'),ctx=canvas.getContext('2d',{alpha:false});
 let W=0,H=0,dpr=1,particles=[],stars=[],imageReady=false,raf=0,running=false;
 let mode='galaxy',morph=0,targetMorph=0,rotation=0,tilt=.34,lastTime=0,drag=null,dragMoved=false,flash=0;
-const portraitImage = new Image();portraitImage.src='assets/photo.jpg';
+const portraitImage = new Image();portraitImage.src='photo.jpg';
 portraitImage.onload=()=>{createParticles();imageReady=true;};
 portraitImage.onerror=()=>toast('Не удалось загрузить фото. Обнови страницу.');
 const phrases=['Я тебя люблю','I love you','Je t’aime','Ti amo','Te amo','Ich liebe dich','Я кахаю цябе','Seni seviyorum','愛してる','사랑해','Eu te amo','Кохаю тебе'];
