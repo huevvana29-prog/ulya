@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#180e18">
+  <meta name="description" content="Одно письмо. Целая вселенная чувств. Только для тебя.">
+  <title>Для тебя, Уля</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"></div>
+  <main>
+    <section id="lock" class="screen active" aria-labelledby="lock-title">
+      <div class="lock-content">
+        <div class="tiny-star" aria-hidden="true">✧</div>
+        <h1 id="lock-title">Эта эмоция закрыта словом</h1>
+        <p class="handwritten hint">наша маленькая тайна, понятная только нам</p>
+        <form id="unlock-form" autocomplete="off">
+          <label class="sr-only" for="secret">Секретное слово</label>
+          <input id="secret" type="text" placeholder="секретная фраза" spellcheck="false" autocapitalize="none" aria-describedby="unlock-error">
+          <button class="pink" type="submit">Открыть</button>
+          <p id="unlock-error" class="form-message" aria-live="polite"></p>
+        </form>
+      </div>
+      <span class="footnote">кое-что очень личное, только для тебя</span>
+    </section>
+
+    <section id="envelope-screen" class="screen" aria-label="Письмо для тебя" inert>
+      <div class="envelope-wrap">
+        <p class="envelope-label handwritten">Это тебе, любимая</p>
+        <button class="envelope" id="envelope" aria-label="Распечатать конверт">
+          <span class="envelope-paper"></span><span class="envelope-back"></span>
+          <span class="envelope-front"></span><span class="envelope-flap"></span>
+          <span class="wax-seal"><span>♥</span></span>
+        </button>
+        <p class="open-hint">коснись печати</p>
+      </div>
+    </section>
+
+    <section id="letter-screen" class="screen" aria-labelledby="letter-title" inert>
+      <div class="letter-layout">
+        <article class="letter">
+          <p class="dedication handwritten">это тебе, любимая</p>
+          <h2 id="letter-title">Чтобы ты знала</h2>
+          <div class="letter-copy handwritten">
+            <p>Иногда самое важное сложнее всего сказать. Поэтому я решил собрать для тебя маленькую вселенную.</p>
+            <p>В ней каждая звезда — это мысль о тебе. Твоя улыбка, твой взгляд, твой голос. Всё то, что делает обычный день особенным.</p>
+            <p>Я люблю тебя. Не только в красивые моменты, а каждый день. Когда мы рядом. Когда скучаю. Даже когда не нахожу нужных слов.</p>
+            <p>Если когда-нибудь захочешь почувствовать меня рядом — просто открой эту страницу.</p>
+            <p>В этой вселенной самая красивая звезда — ты.</p>
+          </div>
+          <p class="signature handwritten">Твой ♥</p>
+        </article>
+        <button id="to-galaxy" class="pink">Дальше 🤍</button>
+      </div>
+    </section>
+
+    <section id="universe-screen" class="screen" aria-label="Твоя вселенная" inert>
+      <canvas id="universe" aria-label="Вращающаяся галактика из розовых звёзд, превращающаяся в твой портрет"></canvas>
+      <div class="galaxy-caption" id="galaxy-caption">
+        <p class="rotate-hint">покрути галактику</p>
+        <button class="pink miss-button" id="reveal">нажми, если скучаешь</button>
+      </div>
+      <div id="portrait-caption" class="portrait-caption" aria-live="polite">
+        <h2 class="handwritten">Любимая</h2>
+        <p class="handwritten">Я тебя люблю на всех языках мира</p>
+        <small>проведи по портрету, чтобы снова увидеть звёзды</small>
+      </div>
+      <div class="universe-actions">
+        <button id="share" class="pink">Поделиться</button>
+        <button id="save" class="secondary">Сохранить себе</button>
+        <button id="restart" class="text-button">Прочитать письмо ещё раз</button>
+      </div>
+      <button id="back-to-stars" class="back-stars" aria-label="Вернуться к галактике" hidden>↶ <span>к звёздам</span></button>
+      <div class="toast" id="toast" role="status"></div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
+
